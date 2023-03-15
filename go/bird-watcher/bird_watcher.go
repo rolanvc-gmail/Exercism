@@ -17,14 +17,14 @@ func BirdsInWeek(birdsPerDay []int, week int) int {
 	lower := 7 * (week - 1)
 	upper := lower + 7
 	for i, c := range birdsPerDay {
-		if i > lower && i < upper {
+		if i >= lower && i < upper {
 			total += c
 		}
 	}
 	return total
 }
 func isOdd(i int) bool {
-	if (i-1)%2 == 0 {
+	if (i)%2 == 0 {
 		return true
 	}
 	return false
